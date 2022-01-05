@@ -3,6 +3,8 @@ const express = require('express')
 const app = express()
 app.use(express.json())
 
+app.use(express.static("build"))
+
 const foods = ["Christmas Pudding", "Mince pie", "stuffing", "eggnog", "gingersnaps"]
 
 app.get("/api/foods", (req, res) => {
